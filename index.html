@@ -4,116 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Pomodoro App</title>
 </head>
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    background-color: #FFF1CA;
-    color: #fffffe;
-    font-family: 'Segoe UI', Arial, sans-serif;
-  }
-
-  nav {
-    width: 100%;
-    height: 90px;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    border-bottom: 0px solid black;
-    background: #4a4e69;
-    color: #f2e9e4;
-  }
-
-  footer {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0px;
-    border-top: 0px solid black;
-    background-color: #4a4e69;
-    color: #f2e9e4;
-  }
-
-  .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .header-container h1 {
-    font-size: 30px;
-    color: #7f9c63;
-    margin: 0;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    border-radius: 20px;
-    background-color: #ffcf4d;
-    border: 2px solid #eebbc3;
-    box-shadow: 0 4px 24px rgba(34, 41, 70, 0.15);
-  }
-
-  #timer {
-      color: #2D4F2B;
-      margin: 15px;
-      font-size: 60px;
-      font-weight: bold;
-    }
-
-  .btn-container-bottom {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-  }
-
-  .button {
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    padding: 10px 20px;
-    background-color: #708A58;
-    color: #fff;
-    border-radius: 8px;
-    padding: 8px 20px;
-    font-size: 18px;
-  }
-
-  .button:hover {
-    background-color: #3f4e32;
-    color : #fffffe;
-    box-shadow: 2px 4px 5px 3px rgba(34, 41, 70, 0.15);
-  }
-
-  footer p {
-    margin: 0;
-    font-size: 20px;
-    color: #f2e9e4;
-  }
-</style>
 
 <body>
   <nav>
@@ -122,6 +15,7 @@
       <b style="color: #a5b992;">Aim for Productivity, One Pomodoro at a Time.</b>
     </div>
   </nav>
+
   <div class="container">
     <div class="timer-container">
       <h2 id="timer">25:00</h2> <br />
@@ -131,60 +25,13 @@
       <button class="button" onclick="pauseTimer()">Pause</button>
       <button class="button" onclick="resetTimer()">Reset</button>
     </div>
+
   </div>
-  <script>
-    let workMinutes = 25;
-    let seconds = 0;
-    let timer;
-    let isRunning = false;
-
-    function updateDisplay() {
-      const timerElement = document.getElementById("timer");
-      let min = workMinutes.toString().padStart(2, '0');
-      let sec = seconds.toString().padStart(2, '0');
-      timerElement.textContent = `${min}:${sec}`;
-    }
-
-    function startTimer() {
-      if (!isRunning) {
-        isRunning = true;
-        timer = setInterval(() => {
-          if (seconds === 0) {
-            if (workMinutes === 0) {
-              clearInterval(timer);
-              isRunning = false;
-              alert("Time's up!");
-              return;
-            }
-            workMinutes--;
-            seconds = 59;
-          } else {
-            seconds--;
-          }
-          updateDisplay();
-        }, 1000);
-      }
-    }
-
-    function pauseTimer() {
-      clearInterval(timer);
-      isRunning = false;
-    }
-
-    function resetTimer() {
-      clearInterval(timer);
-      workMinutes = 25;
-      seconds = 0;
-      isRunning = false;
-      updateDisplay();
-    }
-    updateDisplay();
-  </script>
   </div>
   <footer>
     <p>Connect with me on GitHub : <a href="https://github.com/bhushanmurkute56" target="_blank"
         style="color: #f2e9e4;;">Bhushan Murkute</a></p>
   </footer>
+  <script src="script.js"></script>
 </body>
-
 </html>
