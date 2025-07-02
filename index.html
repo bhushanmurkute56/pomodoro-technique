@@ -10,26 +10,35 @@
 
 <body>
   <nav>
-    <div class="header-container">
-      <h1>PomoAim👀</h1>
-      <b style="color: #a5b992;">Aim for Productivity, One Pomodoro at a Time.</b>
-    </div>
+    <h1 class="app-name">PomoAim👀</h1>
+    <p class="app-description">Aim for <span class="description-highlight">Productivity</span>, One Pomodoro at a Time.
+    </p>
   </nav>
 
   <div class="container">
     <div class="timer-container">
       <h2 id="timer">25:00</h2> <br />
     </div>
-    <div class="btn-container-bottom">
-      <button class="button" onclick="startTimer()">Start</button>
-      <button class="button" onclick="pauseTimer()">Pause</button>
-      <button class="button" onclick="resetTimer()">Reset</button>
+    <div class="btn-container">
+      <button class="btn" onclick="startTimer()">
+        <img src="./img/play.png" alt="Start" class="btn-icon">
+        Start
+      </button>
+      <button class="btn btn-pause" onclick="pauseTimer()">
+        <img src="./img/pause.png" alt="Start" class="btn-icon">
+        Pause
+      </button>
+      <button class="btn btn-reset" onclick="resetTimer()">
+        <img src="./img/reset.png" alt="Start" class="btn-icon">
+        Reset
+      </button>
     </div>
-
-  </div>
   </div>
   <footer>
-    <p>Check out the source code on GitHub : <a href="https://github.com/bhushanmurkute56/pomodoro-technique.git" target="_blank"><img src="github (1).png" alt="" id="imgElement"></p></a>
+    <a href="https://github.com/bhushanmurkute56/pomodoro-technique.git" target="_blank" class="github-link">
+      <img src="./img/github.png" alt="" class="github-logo">
+      Check out the source code on GitHub
+    </a>
   </footer>
   <script src="script.js"></script>
 </body>

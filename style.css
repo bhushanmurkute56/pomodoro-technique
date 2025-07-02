@@ -1,117 +1,110 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    background-color: #FFF1CA;
-    color: #fffffe;
-    font-family: 'Segoe UI', Arial, sans-serif;
-  }
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2D4F2B;
+}
 
-  nav {
-    width: 100%;
-    height: 90px;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    border-bottom: 0px solid black;
-    background: #4a4e69;
-    color: #f2e9e4;
-  }
+footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  background-color: #FFF1CA;
+}
 
-  footer {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0px;
-    border-top: 0px solid black;
-    background-color: #4a4e69;
-    color: #f2e9e4;
-  }
+.app-name {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px;
+}
 
-  .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.app-description {
+  font-size: 22px;
+  text-align: center;
+  color: #708A58;
+}
 
-  .header-container h1 {
-    font-size: 30px;
-    color: #7f9c63;
-    margin: 0;
-    margin-bottom: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.description-highlight {
+  color: #2D4F2B;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 0 10px;
+  background-color: #FFF1CA;
+}
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    border-radius: 20px;
-    background-color: #ffcf4d;
-    border: 2px solid #eebbc3;
-    box-shadow: 0 4px 24px rgba(34, 41, 70, 0.15);
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  #timer {
-      color: #2D4F2B;
-      margin: 15px;
-      font-size: 60px;
-      font-weight: bold;
-    }
+#timer {
+  margin: 30px;
+  font-size: 100px;
+  font-weight: bold;
+  color: #000;
+}
 
-  .btn-container-bottom {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-  }
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
 
-  .button {
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    padding: 10px 20px;
-    background-color: #708A58;
-    color: #fff;
-    border-radius: 8px;
-    padding: 8px 20px;
-    font-size: 18px;
-  }
+.btn {
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  min-width: 150px;
+  background-color: #FFB823;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 4px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .button:hover {
-    background-color: #3f4e32;
-    color : #fffffe;
-    box-shadow: 2px 4px 5px 3px rgba(34, 41, 70, 0.15);
-  }
+.btn-pause {
+  background-color: #FFF1CA;
+  color: #000;
+}
 
-  footer p {
-    margin: 0;
-    font-size: 20px;
-    color: #f2e9e4;
-  }
+.btn-reset {
+  background-color: #708A58;
+}
 
-  #imgElement {
-    height: 35px;
-    width: 35px;
-    border-radius: 100%;
-    background-color: #FFF;
-    position: absolute;
-    bottom: 25px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
+.btn:hover {
+  box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.15);
+  border-bottom: 4px solid #708A58;
+  transition: 0.4s;
+}
+
+.btn-icon {
+  height: 25px;
+  margin-right: 15px;
+}
+
+footer p{
+  margin: 0;
+  font-size: 20px;
+}
+
+.github-logo {
+  height: 30px;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  color: #000;
+}
